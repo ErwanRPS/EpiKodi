@@ -16,7 +16,17 @@ jobs:
     - name: Install Qt and dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y qt6-base-dev qt6-multimedia-dev qt6-base-private-dev libqt6multimedia6 libqt6multimediaquick6 libqt6multimediawidgets6 qtmultimedia6-dev cmake
+        sudo apt-get install -y cmake ninja-build \
+            qt6-base-dev \
+            qt6-multimedia-dev \
+            qt6-base-private-dev \
+            libqt6core6 \
+            libqt6gui6 \
+            libqt6widgets6 \
+            libqt6multimedia6 \
+            libqt6multimediawidgets6 \
+            libqt6network6 \
+            libqt6sql6
 
     - name: Configure CMake
       run: |
